@@ -1,0 +1,21 @@
+{
+  "tournamentName": "TOURNAMENT 2025 test",
+  "nextMatch": {
+    "team1": {
+      "name": "LOL",
+      "score": 1
+    },
+    "team2": {
+      "name": "GEN",
+      "score": 2
+    },
+    "countdown": {
+      "time": {
+        "hour": 21,
+        "minute": 50
+      },
+      "timezone": "Asia/Ho_Chi_Minh",
+      "timezoneInfo": "List timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
+    }
+  }
+} 
