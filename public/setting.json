@@ -1,21 +1,55 @@
 {
-  "tournamentName": "TOURNAMENT 2025 test",
-  "nextMatch": {
-    "team1": {
-      "name": "LOL",
-      "score": 1
-    },
-    "team2": {
-      "name": "GEN",
-      "score": 2
-    },
+  "tournamentName": "TOURNAMENT 2025 Discord",
+  "matchDay": {
+    "title": "Round Robin",
     "countdown": {
       "time": {
-        "hour": 21,
-        "minute": 50
+        "hour":0,
+        "minute": 30
       },
       "timezone": "Asia/Ho_Chi_Minh",
       "timezoneInfo": "List timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
-    }
+    },
+    "matches": [
+      {
+        "id": 1,
+        "title": "Match 1",
+        "team1": {
+          "name": "DINO",
+          "score": 1
+        },
+        "team2": {
+          "name": "HVE",
+          "score": 0
+        },
+        "isLive": false
+      },
+      {
+        "id": 2,
+        "title": "Match 2",
+        "team1": {
+          "name": "T1",
+          "score": 1
+        },
+        "team2": {
+          "name": "DK",
+          "score": 0
+        },
+        "isLive": false
+      },
+      {
+        "id": 3,
+        "title": "Match 3",
+        "team1": {
+          "name": "HLE",
+          "score": 0
+        },
+        "team2": {
+          "name": "KT",
+          "score": 0
+        },
+        "isLive": true
+      }
+    ]
   }
 } 
