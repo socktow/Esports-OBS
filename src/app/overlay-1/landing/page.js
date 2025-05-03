@@ -33,18 +33,18 @@ export default function Overlay1Landing() {
           <div className="text-center">
             <h1 className="text-8xl font-bold mb-4 text-white drop-shadow-lg animate-fade-in font-bebas tracking-wider">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-500 animate-gradient">
-                ESPORTS TOURNAMENT
+              Devil's Nest Tournament Season 1
               </span>
             </h1>
             <p className="text-4xl text-gray-300 font-light animate-fade-in-delay font-orbitron tracking-widest">
-              SEASON <span className="text-blue-400">2025</span>
+              PRIZE POOL <span className="text-blue-400">800$</span>
             </p>
           </div>
         </div>
 
         {/* Footer with Sponsors */}
         <div className="h-[100px] flex items-center justify-center gap-8 bg-transparent">
-          <div className="text-white text-xl font-light font-orbitron">POWERED BY</div>
+          <div className="text-white text-xl font-light font-orbitron">POWERED BY https://discord.gg/qThgujGF </div>
           <div className="flex gap-6">
             {/* Add sponsor logos here */}
             <div className="w-32 h-12 bg-white/10 rounded hover:bg-white/20 transition-all duration-300"></div>

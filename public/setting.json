@@ -1,10 +1,10 @@
 {
-  "tournamentName": "TOURNAMENT 2025 Discord",
+  "tournamentName": "Devil's Nest Tournament Season 1",
   "matchDay": {
     "title": "Round Robin",
     "countdown": {
       "time": {
-        "hour":0,
+        "hour":10,
         "minute": 30
       },
       "timezone": "Asia/Ho_Chi_Minh",
@@ -15,11 +15,11 @@
         "id": 1,
         "title": "Match 1",
         "team1": {
-          "name": "DINO",
+          "name": "PSI",
           "score": 1
         },
         "team2": {
-          "name": "HVE",
+          "name": "GFF",
           "score": 0
         },
         "isLive": false
@@ -28,27 +28,27 @@
         "id": 2,
         "title": "Match 2",
         "team1": {
-          "name": "T1",
-          "score": 1
-        },
-        "team2": {
-          "name": "DK",
+          "name": "DN",
           "score": 0
         },
-        "isLive": false
+        "team2": {
+          "name": "KFC",
+          "score": 0
+        },
+        "isLive": true
       },
       {
         "id": 3,
         "title": "Match 3",
         "team1": {
-          "name": "HLE",
+          "name": "MG",
           "score": 0
         },
         "team2": {
-          "name": "KT",
+          "name": "PRO",
           "score": 0
         },
-        "isLive": true
+        "isLive": false
       }
     ]
   }
