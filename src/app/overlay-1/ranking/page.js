@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 export default function RankingPage() {
-  const totalMatches = 6; // Define total matches once
+  const totalMatches = 6;
 
   const [teams, setTeams] = useState([
     { id: 1, name: 'Team MG', wins: 6 },
@@ -126,45 +126,66 @@ export default function RankingPage() {
         }
 
         .top-team {
-          background: linear-gradient(45deg, rgba(234, 179, 8, 0.1), rgba(234, 179, 8, 0.2));
+          background: linear-gradient(45deg, rgba(234, 179, 8, 0.15), rgba(234, 179, 8, 0.3));
+          border-left: 4px solid #eab308;
         }
 
         .second-team {
-          background: linear-gradient(45deg, rgba(156, 163, 175, 0.1), rgba(156, 163, 175, 0.2));
+          background: linear-gradient(45deg, rgba(156, 163, 175, 0.15), rgba(156, 163, 175, 0.3));
+          border-left: 4px solid #9ca3af;
         }
 
         .third-team {
-          background: linear-gradient(45deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.2));
+          background: linear-gradient(45deg, rgba(239, 68, 68, 0.15), rgba(239, 68, 68, 0.3));
+          border-left: 4px solid #ef4444;
         }
 
         .fourth-team {
-          background: linear-gradient(45deg, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0.2));
+          background: linear-gradient(45deg, rgba(139, 92, 246, 0.15), rgba(139, 92, 246, 0.3));
+          border-left: 4px solid #8b5cf6;
+        }
+
+        .esports-title {
+          text-shadow: 0 0 10px rgba(59, 130, 246, 0.5),
+                       0 0 20px rgba(59, 130, 246, 0.3),
+                       0 0 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .esports-table {
+          background: linear-gradient(135deg, rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.9));
+          border: 1px solid rgba(59, 130, 246, 0.2);
+          box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+        }
+
+        .esports-header {
+          background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.2));
+          border-bottom: 2px solid rgba(59, 130, 246, 0.3);
         }
       `}</style>
 
-      <div className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
+      <div className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-gray-950 via-blue-950 to-gray-950">
         {/* Video Background */}
         <video
           autoPlay
           loop
           muted
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-5"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-10"
         >
           <source src="/image/ahri.mp4" type="video/mp4" />
         </video>
 
         {/* Content */}
         <div className="relative z-20 min-h-screen flex flex-col items-center justify-center p-8">
-          <h1 className="text-7xl font-black text-white mb-16 animate-fade-in tracking-wider text-center">
+          <h1 className="text-7xl font-black mb-16 animate-fade-in tracking-wider text-center esports-title">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600">
               TEAM RANKINGS
             </span>
           </h1>
           
-          <div className="w-full max-w-5xl backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden animate-slide-up border border-blue-500/20">
+          <div className="w-full max-w-5xl backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden animate-slide-up esports-table">
             <table className="w-full">
               <thead>
-                <tr className="bg-gray-900/50">
+                <tr className="esports-header">
                   <th className="py-8 px-10 text-gray-300 font-bold text-sm uppercase tracking-wider">
                     <div className="flex items-center justify-center gap-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -241,11 +262,11 @@ export default function RankingPage() {
                     <td className="py-6 px-10 text-center">
                       <span className={`
                         win-count inline-block px-6 py-2 rounded-full font-bold text-xl
-                        ${index === 0 ? 'bg-yellow-500/20 text-yellow-400 hover:bg-yellow-500/30' : ''}
-                        ${index === 1 ? 'bg-gray-500/20 text-gray-300 hover:bg-gray-500/30' : ''}
-                        ${index === 2 ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30' : ''}
-                        ${index === 3 ? 'bg-purple-500/20 text-purple-400 hover:bg-purple-500/30' : ''}
-                        ${index > 3 ? 'bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30' : ''}
+                        ${index === 0 ? 'bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 text-yellow-400 hover:from-yellow-500/30 hover:to-yellow-600/30' : ''}
+                        ${index === 1 ? 'bg-gradient-to-r from-gray-500/20 to-gray-600/20 text-gray-300 hover:from-gray-500/30 hover:to-gray-600/30' : ''}
+                        ${index === 2 ? 'bg-gradient-to-r from-red-500/20 to-red-600/20 text-red-400 hover:from-red-500/30 hover:to-red-600/30' : ''}
+                        ${index === 3 ? 'bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-400 hover:from-purple-500/30 hover:to-purple-600/30' : ''}
+                        ${index > 3 ? 'bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 text-emerald-400 hover:from-emerald-500/30 hover:to-emerald-600/30' : ''}
                         transition-colors duration-300
                       `}>
                         {team.wins}
@@ -254,11 +275,11 @@ export default function RankingPage() {
                     <td className="py-6 px-10 text-center">
                       <span className={`
                         lose-count inline-block px-6 py-2 rounded-full font-bold text-xl
-                        ${index === 0 ? 'bg-yellow-500/20 text-yellow-400 hover:bg-yellow-500/30' : ''}
-                        ${index === 1 ? 'bg-gray-500/20 text-gray-300 hover:bg-gray-500/30' : ''}
-                        ${index === 2 ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30' : ''}
-                        ${index === 3 ? 'bg-purple-500/20 text-purple-400 hover:bg-purple-500/30' : ''}
-                        ${index > 3 ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30' : ''}
+                        ${index === 0 ? 'bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 text-yellow-400 hover:from-yellow-500/30 hover:to-yellow-600/30' : ''}
+                        ${index === 1 ? 'bg-gradient-to-r from-gray-500/20 to-gray-600/20 text-gray-300 hover:from-gray-500/30 hover:to-gray-600/30' : ''}
+                        ${index === 2 ? 'bg-gradient-to-r from-red-500/20 to-red-600/20 text-red-400 hover:from-red-500/30 hover:to-red-600/30' : ''}
+                        ${index === 3 ? 'bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-400 hover:from-purple-500/30 hover:to-purple-600/30' : ''}
+                        ${index > 3 ? 'bg-gradient-to-r from-red-500/20 to-red-600/20 text-red-400 hover:from-red-500/30 hover:to-red-600/30' : ''}
                         transition-colors duration-300
                       `}>
                         {totalMatches - team.wins}
